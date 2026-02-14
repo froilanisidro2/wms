@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --input-bg: #ffffff;
+  --input-text: #171717;
+  --input-border: #d1d5db;
+  --input-focus: #3b82f6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --input-bg: #ffffff;
+    --input-text: #171717;
+    --input-border: #d1d5db;
+    --input-focus: #3b82f6;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Global input, textarea, and select styling */
+input,
+textarea,
+select {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--input-border);
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--foreground);
+  opacity: 0.6;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: var(--foreground);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Checkbox and radio button styling */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--input-focus);
+  cursor: pointer;
+}
+
+/* Accessibility improvements */
+*:focus-visible {
+  outline: 2px solid var(--input-focus);
+  outline-offset: 2px;
+}
+
+/* Mobile responsive viewport */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents iOS zoom on input focus */
+    min-height: 44px; /* Touch-friendly size */
+  }
+
+  button {
+    min-height: 44px; /* Touch-friendly button size */
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+}
