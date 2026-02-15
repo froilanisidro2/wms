@@ -88,7 +88,7 @@ export default function Home() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 p-4">
       <div className="bg-white rounded-lg shadow-2xl p-6 sm:p-8 w-full max-w-md">
         <div className="text-center mb-8">
-          <img src="/login.png" alt="Expedise PH" className="h-24 sm:h-32 mb-4 mx-auto" />
+          <img src="/login.png" alt="One Arsenal" className="h-24 sm:h-32 mb-4 mx-auto" />
             <p className="font-bold text-sm sm:text-base text-gray-600">Warehouse Management System</p>
         </div>
 

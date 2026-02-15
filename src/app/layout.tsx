@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Expedise PH - WMS",
+  title: "One Arsenal - WMS",
   description: "Complete WMS with inbound, outbound, and inventory management",
   icons: {
     icon: "/favicon.png",
